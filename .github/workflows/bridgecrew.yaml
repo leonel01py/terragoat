@@ -29,5 +29,6 @@ jobs:
       # this is required since GitHub by default won't run the next step
       # when the previous one has failed. Alternatively, enable soft_fail in BC action.
       if: success() || failure()
-      with:
+      with: 
+        soft_fail: true
         sarif_file: results.sarif
